@@ -8,7 +8,18 @@ The sequence controller is the first version of the long awaited automatic playo
 
 ## Deployment
 
-Sequence Controller is a Python Flask app, and the project can be run in Docker. Set your settings in `config.py`
+Sequence Controller is a Python Flask app, and the project can be run in Docker. Set your settings in `config.py`. If you want to specify a port other than 3000, that must also be changed in the Dockerfile.
+
+### API Key
+
+You'll need to have a MyRadio API Key for the project with the following permissions:
+
+* `AUTH_JUKEBOXREQUESTTRACK`
+* `AUTH_EDITSHOWS`
+* `AUTH_MODIFYWEBCAM`
+* `AUTH_TRACKLIST_ALL`
+
+### Docker
 
 **Building Docker Image**
 
@@ -18,7 +29,7 @@ Sequence Controller is a Python Flask app, and the project can be run in Docker.
 
 `docker run -p PORT:PORT -d sequencer`
 
-where `PORT` is the port the app runs on, specified in `config.py`.
+where `PORT` is the port the app runs on, specified in `config.py` and the Dockerfile.
 
 ### Jukebox
 
