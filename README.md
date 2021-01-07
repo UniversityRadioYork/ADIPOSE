@@ -14,7 +14,7 @@ Sequence Controller is a Python Flask app, and the project can be run in Docker.
 
 You'll need to have a MyRadio API Key for the project with the following permissions:
 
-* `AUTH_JUKEBOXREQUESTTRACK`
+* `AUTH_JUKEBOX_MODIFYPLAYLISTS`
 * `AUTH_EDITSHOWS`
 * `AUTH_MODIFYWEBCAM`
 * `AUTH_TRACKLIST_ALL`
