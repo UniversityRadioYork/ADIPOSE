@@ -143,6 +143,23 @@ def hourUpdate():
             
             # Update Mixclouder
             my_radio_api_request("timeslot/{}/meta".format(currentTimeslotID), "PUT", data = {"string_key": "upload_state", "value": "Played Out"})
+    else:
+        sequencedShow = False
+        currentTimeslotID = None
+        currentSequence = []
+        
+    return status()
+
+@app.route("/endShow")
+def end_show():
+    global sequencedShow
+    global currentTimeslotID
+    global currentSequence
+
+    sequencedShow = False
+    currentTimeslotID = None
+    currentSequence = []    
+
     return status()
 
 
